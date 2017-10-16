@@ -1,0 +1,684 @@
+@media screen and (max-width:2561px) and (min-width:2000px) {
+    .cards::before {
+        content: '';
+        position: absolute;
+        width: 23%;
+        height: 1px;
+        right: 16%;
+        top: 6.9%;
+        background: lightgray;
+    }
+    .cards {
+        margin-top: 73px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 206px;
+        height: 85%;
+        position: relative;
+        width: auto;
+        margin-right: -76px;
+    }
+    .rightPropose img {
+        margin: 70px -105px;
+        width: 1000px!important;
+    }
+    .rightRequest .count {
+        position: relative;
+        margin: 676px 0 10px 204px;
+    }
+    .titlePropose::before {
+        content: '';
+        width: 16%;
+        border-top: 1px solid #d9d9d9;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .titlePropose::after {
+        content: '';
+        width: 16%;
+        border-bottom: 1px solid #d9d9d9;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .leftCases .titlePropose::before{
+        content: '';
+        width: 35%;
+        border-top: 1px solid #d9d9d9;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .leftCases .titlePropose::after{
+        content: '';
+        width: 35%;
+        border-bottom: 1px solid #d9d9d9;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .directional_nav {
+        height: 60px;
+        position: relative;
+        top: -45px;
+        left: 47px;
+    }
+    .topCard {
+        background: url(../img/card_family.png);
+        left: 106%;
+    }
+    .midCard {
+        background: url(../img/card_standart.png);
+        left: 120%;
+    }
+    .botCard {
+        background: url(../img/card_lite.png);
+        left: 140%;
+    }
+}
+@media screen and (max-width:1441px) {
+    .rightPropose img{
+        width: 140%;
+    }
+    .cards::before {
+        content: '';
+        position: absolute;
+        width: 23%;
+        height: 1px;
+        right: 16%;
+        top: 6.9%;
+        background: lightgray;
+    }
+    .cards {
+        margin-top: 73px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: -116px;
+        height: 85%;
+        position: relative;
+        width: 130%;
+        margin-right: -261px;
+    }
+    .topInfo h1 {
+        font-size: 50px;
+        font-family: PNB;
+    }
+    .titleRequest {
+        font-family: PNBlack!important;
+        font-size: 40px!important;
+        position: relative;
+        margin-left: 0!important;
+        padding: 15px 0 15px 44px;
+        margin-bottom: 50px!important;
+    }
+    .leftReauest p {
+        font-family: PNR;
+        margin-left: 44px;
+        font-size: 16px;
+        margin-bottom: 69px;
+    }
+    .rightRequest .count::before {
+        content: '';
+        position: absolute;
+        width: 37.5%;
+        left: -39.8%;
+        height: 1px;
+        background: #ddd6d1;
+        top: 46%;
+    }
+    #cases {
+        width: 100%;
+        height: 944px;
+        margin-top: 54%;
+    }
+    .slide p:nth-child(n+2) {
+        font-size: 13px;
+    }
+    .titlePropose {
+        font-size: 40px;
+        padding: 35px 43px;
+        position: relative;
+        font-family: PNBlack;
+    }
+    .content .text {
+        margin-left: 40px;
+        margin-top: 45px;
+        margin-bottom: 65px;
+        font-family: PNR;
+        font-size: 12px;
+    }
+    .content form button {
+        width: 80%;
+        height: 70px;
+        color: white;
+        background: transparent;
+        border: 1px solid white;
+        font-family: PNB;
+        font-size: 12px;
+        cursor: pointer;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        transition: .4s;
+    }
+    .qb .chb:nth-child(2) {
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width:1026px) {
+    .cards {
+        margin-top: 73px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: -78px;
+        height: 85%;
+        position: relative;
+        width: 130%;
+        margin-right: -261px;
+    }
+    .cards::before{
+        content:none;
+    }
+    .topInfo h1 {
+        font-size: 38px;
+        font-family: PNB;
+    }
+    .topInfo p:first-of-type {
+        font-size: 20px;
+        font-family: PNR;
+        margin: 69px 0px 89px;
+    }
+    .rightPropose img {
+        margin: 43px -70px;
+    }
+    .rightPropose {
+        width: 44%;
+        background: #686883;
+        height: 569px;
+        margin-top: -10px;
+    }
+    .rightRequest .count::before {
+        content: '';
+        position: absolute;
+        width: 63.5%;
+        left: -66.8%;
+        height: 1px;
+        background: #ddd6d1;
+        top: 46%;
+    }
+    .titleRequest {
+        font-family: PNBlack!important;
+        font-size: 26px!important;
+        position: relative;
+        margin-left: 0!important;
+        padding: 15px 0 15px 44px;
+        margin-bottom: 50px!important;
+    }
+    .chb img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 49px;
+    }
+    .chb p:nth-child(3) {
+        font-family: PNR;
+        font-size: 11px;
+    }
+    .qb {
+        width: 25%;
+        height: 687px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+    }
+    #advocat {
+        width: 100%;
+        background: #f6eee9;
+        padding: 100px 10.15%;
+        height: 100%;
+    }
+    .paketImgs {
+        width: 100%;
+    }
+    #cases {
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        flex-direction: column;
+    }
+    .leftCases::before {
+        content: none;
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        background: lightgray;
+        right: -50%;
+        top: 0;
+    }
+    .leftCases::after {
+        content: none;
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        background: lightgray;
+        right: -50%;
+        bottom: 0;
+    }
+    .leftCases{
+        width: 100%;
+    }
+    .rightCases{
+        width: 100%;
+        overflow: inherit;
+        display: block;
+    }
+    .bgcards .count {
+        position: absolute;
+        bottom: -80px;
+        color: lightgray;
+        right: 30px;
+    }
+    #advocat>div{
+        flex-direction: column;
+    }
+    .priceBlocks{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    .premium::before {
+        content: none;
+        position: absolute;
+        height: 26%;
+        bottom: -45px;
+        left: -38px;
+        border-left: 1px solid lightgrey;
+    }
+    .premium::after {
+        content: none;
+        position: absolute;
+        height: 1px;
+        width: 62%;
+        bottom: -45px;
+        left: -38px;
+        border-bottom: 1px solid lightgrey;
+    }
+    .standart::before {
+        content: "";
+        position: absolute;
+        height: 26%;
+        top: -45px;
+        right: -38px;
+        border-left: 1px solid lightgrey;
+    }
+    .standart::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 62%;
+        top: -45px;
+        right: -38px;
+        border-bottom: 1px solid lightgrey;
+    }
+    #advocat>.paketImgs{
+        flex-direction: row;
+    }
+}
+@media screen and (max-width:769px) {
+    .bgcards > div{
+        display: none;
+    }
+    .request{
+        left:0;
+    }
+    #advocat .text {
+        font-family: PNR;
+        width: 100%;
+        padding-left: 40px;
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    .titlePropose {
+        font-size: 30px;
+        padding: 35px 43px;
+        position: relative;
+        font-family: PNBlack;
+    }
+    #questions>div{
+        flex-direction: column;
+    }
+    .qb{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+    }
+    .qb .chb:nth-child(2) {
+        margin-top: 0;
+        margin-left: 20px;
+    }
+    .qb:nth-child(2n) {
+        margin-top: 20px;
+    }
+    #cases .content{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .rightCases {
+        width: 100%;
+        overflow: inherit;
+        display: block;
+        height: 100%;
+        padding-left: 0;
+    }
+    .content form {
+        margin-left: 40px;
+        width: 85%;
+        text-align: -webkit-right;
+        padding-bottom: 30px;
+    }
+    .bgcards .count {
+        width: 100px;
+    }
+    #contacts{
+        height: 100%;
+        width: 100%;
+        padding: 90px 0 0 10.15%;
+        flex-direction: column-reverse;
+    }
+    .rightContacts {
+        width: 100%;
+        height: 400px;
+    }
+    .leftContacts {
+        width: 100%;
+    }
+    .paketImgs>div>p {
+        font-family: PNR;
+        font-size: 12px;
+    }
+    .leftReauest {
+        width: 62.76%;
+        padding: 20px 5% 20px 5%;
+        color: white;
+        background-size: cover;
+    }
+    .rightRequest .count::before {
+        content: '';
+        position: absolute;
+        width: 104.5%;
+        left: -114.8%;
+        height: 1px;
+        background: #ddd6d1;
+        top: 46%;
+    }
+    .feedback{
+        left:0;
+    }
+    #propose>div{
+        flex-direction: column-reverse;
+    }
+    .rightPropose img {
+        margin: 43px 7px;
+        width: 100%;
+        height: 100%;
+    }
+    .rightPropose {
+        width: 100%;
+        background: #686883;
+        height: 100%;
+        margin-top: -10px;
+    }
+    .leftPropose {
+        width: 81%;
+        padding-right: 10%;
+        text-align: justify;
+    }
+    .leftPropose p:first-child {
+        margin: 20px 0 29px 0;
+        font-size: 26px;
+        font-family: PNExb;
+    }
+    .topInfo h1 {
+        font-size: 26px;
+        font-family: PNB;
+    }
+    .leftHeader {
+        background: #686883;
+        width: 44%;
+        height: 100%;
+        padding-left: 3.15%;
+        padding-top: 40px;
+    }
+}
+@media screen and (max-width:426px) {
+    .rightRequest .count {
+        position: relative;
+        margin: 676px 0px 10px 153px;
+    }
+    #header{
+        flex-direction: column;
+        height: 100%;
+    }
+    .leftHeader {
+        background: #686883;
+        width: 100%;
+        height: 451px;
+        padding-left: 0;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .cards {
+        margin-top: 29px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 54px;
+        height: 85%;
+        position: relative;
+        width: 87%;
+        margin-right: 0;
+    }
+    .rightHeader .topLine {
+        margin-top: 20px;
+    }
+    .topInfo {
+        padding-left: 14%;
+        margin-top: 40px;
+    }
+    #propose {
+        padding: 65px 5% 65px 5%;
+    }
+    .titlePropose {
+        font-size: 27px;
+        padding: 35px 43px;
+        position: relative;
+        font-family: PNBlack;
+    }
+    .leftPropose {
+        width: 100%;
+        padding-right: 0;
+        text-align: justify;
+    }
+    .rightRequest {
+        display: none;
+    }
+    .leftReauest {
+        width: 100%;
+        padding: 20px 5% 20px 5%;
+        color: white;
+        background-size: cover;
+    }
+    #request {
+        height: 500px;
+        margin-bottom: 50px;
+    }
+    .rightHeader {
+        background: #f6eee9;
+        height: 100%;
+        width: 100%;
+        padding-top: 40px;
+        padding-right: 10.15%;
+    }
+    .paketStrahovania {
+        font-family: PNExb;
+        font-size: 23px;
+        margin-bottom: 50px;
+    }
+    #advocat>.paketImgs {
+        flex-direction: column;
+        text-align: center;
+    }
+    .paketImgs .img {
+        width: 50px;
+        height: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: 30px;
+        position: relative;
+        margin: 20px auto;
+    }
+    #advocat {
+        width: 100%;
+        background: #f6eee9;
+        padding: 20px 10.15%;
+        height: 100%;
+    }
+    .slide_viewer {
+        height: 651px;
+        overflow: hidden;
+        position: relative;
+        padding-right: 75px;
+    }
+    .rightHeader p:last-child::before{
+        content:none;
+    }
+}
+@media screen and (max-width:376px) {
+    .cards {
+        margin-top: 29px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 54px;
+        height: 85%;
+        position: relative;
+        width: 84%;
+        margin-right: 0;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .contact a {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .titlePropose {
+        font-size: 20px;
+        padding: 35px 43px;
+        position: relative;
+        font-family: PNBlack;
+    }
+    .qb {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    .qb .chb:nth-child(2) {
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .titlePropose {
+        font-size: 19px;
+        padding: 35px 43px;
+        position: relative;
+        font-family: PNBlack;
+    }
+    #advocat .text {
+        font-family: PNR;
+        width: 100%;
+        padding-left: 40px;
+        margin-top: 50px;
+        font-size: 15px;
+    }
+    #advocat {
+        width: 100%;
+        background: #f6eee9;
+        padding: 20px 5%;
+        height: 100%;
+    }
+    .priceBlocks {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    .standart::before {
+        content: "";
+        position: absolute;
+        height: 26%;
+        top: -45px;
+        right: 0px;
+        border-left: 1px solid lightgrey;
+    }
+    #advocat .count::before {
+        content:none;
+    }
+    .slide_viewer {
+        height: 651px;
+        overflow: hidden;
+        position: relative;
+        padding-right: 51px;
+    }
+}
+@media screen and (max-width:321px) {
+    .cards {
+        margin-top: 29px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 54px;
+        height: 85%;
+        position: relative;
+        width: 79%;
+        margin-right: 0;
+    }
+    .topInfo h1 {
+        font-size: 23px;
+        font-family: PNB;
+    }
+    #request {
+        height: 526px;
+        margin-bottom: 50px;
+    }
+    .titlePropose {
+        font-size: 17px;
+        padding: 35px 43px;
+        position: relative;
+        font-family: PNBlack;
+    }
+    .grad-1, .grad-2, .grad-3 {
+        height: 113%;
+        width: 110%;
+        left: -23px;
+        position: absolute;
+        background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 43%, rgba(255,255,255,1) 100%);
+        background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 43%,rgba(255,255,255,1) 100%);
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 43%,rgba(255,255,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+    }
+    .priceBlocks img {
+        cursor: pointer;
+        margin-bottom: 20px;
+        margin-top: 27px;
+    }
+    .slider::before {
+        content: none;
+    }
+    .slider::after {
+        content: none;
+    }
+    .slide_viewer {
+        height: 651px;
+        overflow: hidden;
+        position: relative;
+        padding-right: 10px;
+        text-align: justify;
+    }
+}

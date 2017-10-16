@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="wow.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP3wm-tWn-AlMsJoigRRnycI4OVvP6Q4U&language=uk"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+        
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 11,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(55.7999733, 37.62232), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    map: map,
+                    title: 'Snazzy!'
+                });
+            }
+        </script>
+  </head>
+  <body>
+    <div id="wrapper">
+        <div class="callBackContainer">
+            <div class="callBack">
+                <p>Оставьте заявку</p>
+                <p>и мы вам перезвоним в течение 5 минут</p>
+                <form action="" id="callBackForm">
+                    <input type="text" name="callBackName" placeholder="Имя">
+                    <input type="tel" name="callBackTel" placeholder="Телефон"> <br>   
+                    <button onclick="callBackSend(); return false;">Перезвоните мне</button>
+                </form>
+                <div class="close" onclick="closeFormCallBack()"><img src="img/close.png" alt=""></div>
+            </div>
+        </div>
+        <div class="BuyContainer">
+                <div class="Buy">
+                    <p>Полная юридическую защита</p>
+                    <p>оставьте свои имя и электронную почту</p>
+                    <form action="" id="BuyForm">
+                        <input type="text" name="BuyName" placeholder="Имя">
+                        <input type="email" name="BuyEmail" placeholder="Эл. адрес"> <br>   
+                        <button onclick="BuySend(); return false;">Получить сертификат</button>
+                    </form>
+                    <div class="close" onclick="closeFormBuy()"><img src="img/close.png" alt=""></div>
+                </div>
+            </div>
+        <header id="header" class="d-flex">
+            <div class="leftHeader">
+                <a href=""><span><img src="img/logo.png" alt=""></span></a>
+                <div class="cards" style="background-image:url('img/cards.png');"></div>
+            </div>
+            <div class="rightHeader">
+                <div class="contact d-flex">
+                    <a href="">+7 (499) 215-14-77</a>
+                    <button onclick="openCallBack();">заказать звонок</button>
+                </div>
+                <hr class="topLine">
+                <div class="topInfo">
+                    <h1>Юрист “в кармане” —</h1>
+                    <p>уникальное юридическое страхование</p>
+                    <button>подробнее</button>
+                </div>
+                <hr class="line">
+                <p class="count"><span>01 </span>/ 07</p>
+            </div>
+        </header>
+        <section id="propose">
+            <p class="titlePropose">Что мы предлагаем?</p>
+            <div class="d-flex">
+                <div class="leftPropose">
+                    <p>Виртуальная карта юридической помощи —</p>
+                    <p>возможность получить личного адвоката, который поможет в решении любых юридических вопросов в режиме 24 часов в сутки 7 дней в неделю.  Вам больше не придется обращаться к дорогостоящим специалистам, после того, как ситуация зашла слишком далеко, поскольку всегда будете иметь возможность получить решение заблаговременно.</p>
+                </div>
+                <div class="rightPropose">
+                    <img src="img/cards1.png" width="880" height="488" alt="">
+                </div>
+            </div>
+            <p class="count"><span>02 </span>/ 07</p>
+        </section>
+        <section id="request" class="d-flex">
+            <div class="leftReauest d-flex flex-column" style="background-image:url('img/bg_request.png');">
+                <p class="titleRequest">Оставьте заявку</p>
+                <p>и мы расскажем как вы сможете сохранить <br> свои деньги, время и главное нервы</p>
+                <form action="">
+                    <input type="text" placeholder="Имя">
+                    <input type="tel" placeholder="Телефон">
+                    <button>Узнать подробнее</button>
+                </form>
+            </div>
+            <div class="rightRequest">
+                <p class="count"><span>03 </span>/ 07</p>
+            </div>
+        </section>
+        <section id="questions">
+            <p class="titlePropose">Какие вопросы мы <br> помогаем решить?</p>
+            <div class="d-flex" style="margin-top:70px;">
+                <div class="questionsBlock1 qb">
+                    <div class="topBlock chb">
+                        <img src="img/img1.png" alt="">
+                        <p>Нестандартные ситуации на дороге</p>
+                        <p>которые могут возникнуть между водителями</p>
+                    </div>
+                    <div class="botBlock chb">
+                        <img src="img/img2.png" alt="">
+                        <p>Некачественные коммунальные услуги</p>
+                        <p>что не соответствуют условиям договора</p>
+                    </div>
+                </div>
+                <div class="questionsBlock2 qb">
+                    <div class="topBlock chb">
+                        <img src="img/img3.png" alt="">
+                        <p>Конфликты с руководством</p>
+                        <p>при оплате больничных листов или отпуска</p>
+                    </div>
+                    <div class="botBlock chb">
+                        <img src="img/img4.png" alt="">
+                        <p>Вопросы принятия наследства</p>
+                        <p>по завещанию или по очереди наследников</p>
+                    </div>
+                </div>
+                <div class="questionsBlock3 qb">
+                    <div class="topBlock chb">
+                        <img src="img/img5.png" alt="">
+                        <p>Возникновение земельных споров</p>
+                        <p>между родственнииками и государством</p>
+                    </div>
+                    <div class="botBlock chb">
+                        <img src="img/img6.png" alt="">
+                        <p>Приобретение недвижимости и ипотека</p>
+                        <p>заключение сделок купли-продажи имущества</p>
+                    </div>
+                </div>
+                <div class="questionsBlock4 qb">
+                    <div class="topBlock chb">
+                        <img src="img/img7.png" alt="">
+                        <p>Защита прав потребителя</p>
+                        <p>урегулирование отношений между покупателем и продавцом</p>
+                    </div>
+                    <div class="botBlock chb">
+                        <img src="img/img8.png" alt="">
+                        <p>Оформление правовых документов</p>
+                        <p>договоров, актов, завещаний, заявлений, исков и т.д.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="count"><span>04 </span>/ 07</p>
+        </section>
+        <section id="advocat">
+            <p class="titlePropose">Пакеты юридического <br>страхования “Личный адвокат”</p>
+            <p class="text">Приятная новость, для вас в течение 2-х недель будет действавоть специальное
+                предложение на приобретение виртуальной карты юридического страхования. Не упустите возможность обеспечить себе и своим близким полную правовую
+                безопасность.</p>
+            <div class="d-flex" style="margin-top:70px;">
+                <div class="standart priceBlocks">
+                    <p class="tarif">Lite</p>
+                    <div class="line_price"></div>
+                    <strike>2 199 руб.</strike>
+                    <p class="price"><span>3 999</span> руб.</p>
+                    <ul>
+                        <div class="grad-1"></div>
+                        <li>Бесплатные звонки из любой точки РФ</li>
+                        <li>6 экстренных юредических консультации 24/7</li>
+                        <li>Личный кабинет</li>
+                        <li>Предоставление форм документов</li>
+                        <li>Вызов экстренных служб</li>
+                        <li>2 письменных консультации</li>
+                    </ul>  
+                    <img class="img-1" src="img/drop_list.png" alt=""> <br>
+                    <button onclick="openBuy()">купить</button>
+                    <p class="date"><span>Срок действия - </span>3 месяцев*</p>
+                </div>
+                <div class="medium priceBlocks">
+                    <p class="tarif">Medium</p>
+                    <div class="line_price"></div>
+                    <strike>7 499 руб.</strike>
+                    <p class="price"><span>6 999</span> руб.</p>
+                    <ul>
+                        <div class="grad-2"></div>
+                        <li>Бесплатные звонки из любой точки РФ</li>
+                        <li>20 экстренных юредических консультации 24/7</li>
+                        <li>Личный кабинет</li>
+                        <li>Предоставление форм документов</li>
+                        <li>Вызов экстренных служб</li>
+                        <li>6 письменных консультации</li>
+                    </ul>  
+                    <img class="img-2" src="img/drop_list.png" alt=""><br>
+                    <button onclick="openBuy()">купить</button>
+                    <p class="date"><span>Срок действия - </span>12 месяцев*</p>
+                </div>
+                <div class="premium priceBlocks">
+                    <p class="tarif">Family</p>
+                    <div class="line_price"></div>
+                    <strike>19 999 руб.</strike>
+                    <p class="price"><span>14 999</span> руб.</p>
+                    <ul>
+                        <div class="grad-3"></div>
+                        <li>Бесплатные звонки из любой точки РФ</li>
+                        <li>Экстренные юридические консультации 24/7</li>
+                        <li>Личный кабинет</li>
+                        <li>Предоставление форм документов</li>
+                        <li>Вызов экстренных служб</li>
+                    </ul>  
+                    <img class="img-3" src="img/drop_list.png" alt=""><br>
+                    <button onclick="openBuy()">купить</button>
+                    <p class="date"><span>Срок действия - </span>12 месяцев*</p>
+                </div>
+            </div>
+            <p class="paketStrahovania">Приобретая пакет юридического страхования, <br> дополнительно вы получаете:</p>
+            <div class="paketImgs d-flex justify-content-between">
+                <div>
+                    <div class="img" style="background-image:url('img/phone-call.png');"></div>
+                    <p>Бесплатные звонки <br> из любой точки РФ</p>
+                </div>
+                <div>
+                    <div class="img" style="background-image:url('img/home.png');"></div>
+                    <p>Личный кабинет</p>
+                </div>
+                <div>
+                    <div class="img" style="background-image:url('img/file.png');"></div>
+                    <p>Предоставление по запросу <br> форм документов</p>
+                </div>
+                <div>
+                    <div class="img" style="background-image:url('img/emergency-call.png');"></div>
+                    <p>Вызов экстренных служб</p>
+                </div>
+            </div>   
+            <p class="count"><span>05 </span>/ 07</p>
+        </section>
+        <section id="cases" class="d-flex">
+            <div class="leftCases">
+                <p class="titlePropose">Кейсы наших клиентов</p>
+                <div class="slider">
+                        <div class="slide_viewer">
+                          <div class="slide_group">
+                            <div class="slide">
+                                <div class="imgAuthor"></div>
+                                <p class="autor">Навруз И.</p>
+                                <p class="slideBold">Возникшая ситуация:</p>
+                                <p>Ночью на трассе его остановили на блок-посту. Попросили предъявить паспорт, он предъявил свой временный паспорт, которым в то время пользовался. После
+                                        проверки сотрудник органов сказал, что такой паспорт по базе "не проходит", а сведений о ранее выданных паспортах у них нет. Что делать? Провести ночь на блок-посту до следующего дня, когда будет закончено разбирательство?
+                                        Получив от сотрудников спецслужб разрешение позвонить в Москву своему
+                                        адвокату, он набрал номер юридической линии НЮС.</p>
+                                <p class="result">Результат:</p>
+                                <p>Адвокат разъяснил Наврузу его правовую ситуацию и стратегию действий.
+                                        Наврузу был возвращен его паспорт и разрешено продолжать свою поездку.
+                                        Всего один звонок на юридическую линию помог быстро разобраться в сложной
+                                        ситуации.</p>
+                            </div>
+                            <div class="slide">
+                                    <div class="imgAuthor"></div>
+                                    <p class="autor">Навруз И.</p>
+                                    <p class="slideBold">Возникшая ситуация:</p>
+                                    <p>Ночью на трассе его остановили на блок-посту. Попросили предъявить паспорт, он предъявил свой временный паспорт, которым в то время пользовался. После
+                                            проверки сотрудник органов сказал, что такой паспорт по базе "не проходит", а сведений о ранее выданных паспортах у них нет. Что делать? Провести ночь на блок-посту до следующего дня, когда будет закончено разбирательство?
+                                            Получив от сотрудников спецслужб разрешение позвонить в Москву своему
+                                            адвокату, он набрал номер юридической линии НЮС.</p>
+                                    <p class="result">Результат:</p>
+                                    <p>Адвокат разъяснил Наврузу его правовую ситуацию и стратегию действий.
+                                            Наврузу был возвращен его паспорт и разрешено продолжать свою поездку.
+                                            Всего один звонок на юридическую линию помог быстро разобраться в сложной
+                                            ситуации.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- End // .slider -->
+                      
+                      <div class="directional_nav">
+                        <div class="previous_btn" title="Previous">
+                                &#8592;
+                        </div>
+                        <div class="next_btn" title="Next">
+                                &#8594;
+                        </div>
+                      </div><!-- End // .directional_nav -->
+            </div>
+            <div class="rightCases d-flex"> 
+                <div class="content">
+                    <p class="titlePropose">Оставьте заявку</p>
+                    <p class="text">Наш юрист поможет в выборе тарифа <br> и ответит на все ваши вопросы</p>
+                    <form action="" class="d-flex flex-column">
+                        <input type="text" placeholder="Имя">
+                        <input type="tel" placeholder="Телефон">
+                        <button>Получить консультацию</button>
+                    </form>
+                </div>
+                <div class="bgcards d-flex flex-column">
+                    <div class="topCard">
+                        
+                    </div>
+                    <div class="midCard"></div>
+                    <div class="botCard"></div>
+                    <p class="count"><span>06 </span>/ 07</p>
+                </div>
+            </div>
+        </section>
+        <section id="contacts" class="d-flex">
+            <div class="leftContacts">
+                <p class="titlePropose">Наши контакты</p>
+                <div class="contacts">
+                    <div class="local1">
+                        <img src="img/location.png" class="float-left" alt="">
+                        <p>115054, г. Москва, <br>
+                                Большой Строченовский переулок, <br> дом 22/25, офис 300</p>
+                    </div>
+                    <div class="local2">
+                        <img src="img/tel.png" class="float-left" alt="">
+                        <p>+7 499 215-14-77 <br> +7 499 681-03-38</p>
+                    </div>
+                    <div class="local3">
+                        <img src="img/email.png" class="float-left" alt="">
+                        <p>info@amulex.ru</p>
+                    </div>
+                </div>
+                <p class="count"><span>07
+                     </span>/ 07</p>
+            </div>
+            <div class="rightContacts">
+                <div id="map"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script>
+        $('.slider').each(function() {
+  var $this = $(this);
+  var $group = $this.find('.slide_group');
+  var $slides = $this.find('.slide');
+  var bulletArray = [];
+  var currentIndex = 0;
+  var timeout;
+  
+  function move(newIndex) {
+    var animateLeft, slideLeft;
+    
+    advance();
+    
+    if ($group.is(':animated') || currentIndex === newIndex) {
+      return;
+    }
+    
+    bulletArray[currentIndex].removeClass('active');
+    bulletArray[newIndex].addClass('active');
+    
+    if (newIndex > currentIndex) {
+      slideLeft = '100%';
+      animateLeft = '-100%';
+    } else {
+      slideLeft = '-100%';
+      animateLeft = '100%';
+    }
+    
+    $slides.eq(newIndex).css({
+      display: 'block',
+      left: slideLeft
+    });
+    $group.animate({
+      left: animateLeft
+    }, function() {
+      $slides.eq(currentIndex).css({
+        display: 'none'
+      });
+      $slides.eq(newIndex).css({
+        left: 0
+      });
+      $group.css({
+        left: 0
+      });
+      currentIndex = newIndex;
+    });
+  }
+  
+  function advance() {
+    clearTimeout(timeout);
+    timeout = setTimeout(function() {
+      if (currentIndex < ($slides.length - 1)) {
+        move(currentIndex + 1);
+      } else {
+        move(0);
+      }
+    }, 4000);
+  }
+  
+  $('.next_btn').on('click', function() {
+    if (currentIndex < ($slides.length - 1)) {
+      move(currentIndex + 1);
+    } else {
+      move(0);
+    }
+  });
+  
+  $('.previous_btn').on('click', function() {
+    if (currentIndex !== 0) {
+      move(currentIndex - 1);
+    } else {
+      move(3);
+    }
+  });
+  
+  $.each($slides, function(index) {
+    var $button = $('<a class="slide_btn">&bull;</a>');
+    
+    if (index === currentIndex) {
+      $button.addClass('active');
+    }
+    $button.on('click', function() {
+      move(index);
+    }).appendTo('.slide_buttons');
+    bulletArray.push($button);
+  });
+  
+  advance();
+});
+    </script>
+    <script>
+    $(document).ready(function(){
+        $('.img-1').click(function(){
+            $('.grad-1').addClass('grad');
+        });
+        $('.img-2').click(function(){
+            $('.grad-2').addClass('grad');
+        });
+        $('.img-3').click(function(){
+            $('.grad-3').addClass('grad');
+        });
+    })
+    </script>
+    <script>
+        function openCallBack(){
+            document.getElementsByClassName('callBackContainer')[0].style.display = 'block';
+        }
+        function closeFormCallBack(){
+            document.getElementsByClassName('callBackContainer')[0].style.display = 'none';
+        }
+        function openBuy(){
+            document.getElementsByClassName('BuyContainer')[0].style.display = 'block';
+        }
+        function closeFormBuy(){
+            document.getElementsByClassName('BuyContainer')[0].style.display = 'none';
+        }
+    </script>
+
+  </body>
+</html>
